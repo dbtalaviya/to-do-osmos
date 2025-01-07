@@ -30,7 +30,7 @@ class TaskManager {
      * 
      * @param {string} description - Task description.
      * @param {string} dueDate - Task due date.
-     * @returns {Object} The added task.
+     * @returns {Object} The added task with id.
      * @throws {Error} If task description or due date is missing.
      */
     addTask(description, dueDate) {
@@ -78,7 +78,7 @@ class TaskManager {
      * @throws {Error} If task with the given ID is not found.
      */
     markTaskComplete(id) {
-        const task = this.tasks.find((t) => t.id === id); // 't' for camelCase consistency
+        const task = this.tasks.find((t) => t.id === id);
         if (!task) {
             throw new Error(`Task with ID ${id} not found.`);
         }
@@ -94,9 +94,9 @@ class TaskManager {
      */
     listTasks(filter = null) {
         if (filter === "completed") {
-            return this.tasks.filter((t) => t.completed); // 't' for camelCase consistency
+            return this.tasks.filter((t) => t.completed);
         } else if (filter === "pending") {
-            return this.tasks.filter((t) => !t.completed); // 't' for camelCase consistency
+            return this.tasks.filter((t) => !t.completed);
         }
         return this.tasks;
     }
@@ -109,7 +109,7 @@ class TaskManager {
      * @throws {Error} If task with the given ID is not found.
      */
     deleteTask(id) {
-        const index = this.tasks.findIndex((t) => t.id === id); // 't' for camelCase consistency
+        const index = this.tasks.findIndex((t) => t.id === id);
         if (index === -1) {
             throw new Error(`Task with ID ${id} not found.`);
         }
