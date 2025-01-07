@@ -1,5 +1,4 @@
-import TaskManager from './taskManager';
-
+import TaskManager from "./taskManager.js";
 /**
  * Initializes a new instance of TaskManager to manage tasks.
  */

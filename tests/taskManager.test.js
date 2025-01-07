@@ -3,7 +3,7 @@
  * 
  * @class TaskManager
  */
-import TaskManager from "../src/taskManager";
+import TaskManager from "../src/taskManager.js";
 
 /**
  * Test suite for TaskManager class.
